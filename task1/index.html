@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Light Bulb</title>
+
+  <style>
+    body {
+        font-family: sans-serif;
+    }
+    h1 {
+        text-align: center;
+    }
+    #bodyHolder {
+        margin-top: 200px;
+    }
+    .bulbHolder {
+        text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bodyHolder">
+    <h1>Click The Light Bulb To On/Off</h1>
+    <div class="bulbHolder">
+      <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="light" id="myBulb" onclick="lightBulb()" />
+    </div>
+  </div>
+  <script>
+        const lightBulb = () => {
+          var image = document.getElementById('myBulb');
+            if (image.src.match("https://www.w3schools.com/js/pic_bulbon.gif")) {
+              image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+            } else {
+                image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+            }
+        }
+  </script>
+
+</body>
+
+</html>
